@@ -1,11 +1,128 @@
----
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+<html lang="sk">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Welcome</title>
+		<style>
+			body {
+				font-family: system-ui, sans-serif;
+				margin: 0;
+				padding: 0;
+				background: #f5f7fb;
+				color: #111827;
+			}
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
----
+			.page-shell {
+				display: grid;
+				grid-template-columns: 280px 1fr;
+				min-height: 100vh;
+				gap: 24px;
+				padding: 24px;
+			}
 
-<Layout>
-<p> autor: hgivm1</p>
-</Layout>
+			.sidebar,
+			.content {
+				background: #ffffff;
+				border: 1px solid #e2e8f0;
+				border-radius: 18px;
+				box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+				padding: 22px;
+			}
+
+			.sidebar h2 {
+				margin-top: 0;
+				font-size: 0.95rem;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				color: #475569;
+			}
+
+			.widget {
+				margin-top: 18px;
+				padding: 16px;
+				border-radius: 14px;
+				background: #f8fafc;
+				border: 1px solid #e2e8f0;
+			}
+
+			.widget + .widget {
+				margin-top: 14px;
+			}
+
+			.widget strong {
+				display: block;
+				margin-bottom: 10px;
+				color: #0f172a;
+			}
+
+			.quick-links {
+				padding-left: 1rem;
+				margin: 0;
+			}
+
+			.quick-links li {
+				margin: 10px 0;
+			}
+
+			.quick-links a,
+			.content a {
+				color: #2563eb;
+				text-decoration: none;
+			}
+
+			.quick-links a:hover,
+			.content a:hover {
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page-shell">
+			<aside class="sidebar">
+				<h2>Welcome Hub</h2>
+				<p>Some typical welcome page extras for the first-time visitor.</p>
+
+				<div class="widget">
+					<strong>Latest update</strong>
+					<p>We're rolling out a refreshed homepage experience with quick links, status updates, and friendly navigation.</p>
+				</div>
+
+				<div class="widget">
+					<strong>Did you know?</strong>
+					<ul>
+						<li>Every page can be updated instantly with Astro.</li>
+						<li>Sidebar widgets are great for announcements.</li>
+						<li>Responsive layouts keep content readable on mobile.</li>
+					</ul>
+				</div>
+
+				<div class="widget">
+					<strong>Quick links</strong>
+					<ul class="quick-links">
+						<li><a href="/o-mne">O mne</a></li>
+						<li><a href="https://github.com/hgivm1" target="_blank">GitHub</a></li>
+						<li><a href="/contract">Contract</a></li>
+					</ul>
+				</div>
+			</aside>
+
+			<main class="content">
+				<h1>Welcome</h1>
+				<p>autor: <a href="https://github.com/hgivm1">hgivm1</a></p>
+				<p>This site is a small personal welcome page built with Astro. It includes quick access to biography and contract details while keeping the layout clean and easy to navigate.</p>
+				<section>
+					<h2>About this page</h2>
+					<p>Use the links in the sidebar to explore the profile page, contract overview, and other welcome content. The page is intentionally lightweight to help you focus on the most important information.</p>
+				</section>
+				<section>
+					<h2>Next steps</h2>
+					<ul>
+						<li>Visit <a href="/o-mne">O mne</a> to learn more about the author.</li>
+						<li>Open <a href="/contract">Contract</a> for general service and agreement details.</li>
+						<li>Check back often for updates as the site evolves.</li>
+					</ul>
+				</section>
+			</main>
+		</div>
+	</body>
+</html>	
+
