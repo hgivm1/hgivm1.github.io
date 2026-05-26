@@ -3,12 +3,44 @@
 		<meta charset="UTF-8" />
 		<title>Welcome</title>
 		<style>
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+
+			@keyframes slideInLeft {
+				from {
+					opacity: 0;
+					transform: translateX(-20px);
+				}
+				to {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+
+			@keyframes slideInRight {
+				from {
+					opacity: 0;
+					transform: translateX(20px);
+				}
+				to {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+
 			body {
 				font-family: system-ui, sans-serif;
 				margin: 0;
 				padding: 0;
 				background: linear-gradient(135deg, #f5f7fb 0%, #f3f1fa 50%, #faf7f5 100%);
 				color: #111827;
+				animation: fadeIn 0.6s ease-out;
 			}
 
 			.page-shell {
@@ -25,6 +57,7 @@
 				border-radius: 18px;
 				box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
 				padding: 22px;
+				animation: slideInLeft 0.8s ease-out;
 			}
 
 			.content {
@@ -33,6 +66,7 @@
 				border-radius: 18px;
 				box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
 				padding: 22px;
+				animation: slideInRight 0.8s ease-out;
 			}
 
 			.sidebar h2 {
@@ -51,6 +85,28 @@
 				border-radius: 14px;
 				background: #fef8fb;
 				border: 1px solid #f0e5f0;
+				animation: slideInLeft 0.8s ease-out;
+				animation-fill-mode: both;
+			}
+
+			.widget:nth-child(2) {
+				animation-delay: 0.1s;
+			}
+
+			.widget:nth-child(3) {
+				animation-delay: 0.2s;
+			}
+
+			.widget:nth-child(4) {
+				animation-delay: 0.3s;
+			}
+
+			.widget:nth-child(5) {
+				animation-delay: 0.4s;
+			}
+
+			.widget:nth-child(6) {
+				animation-delay: 0.5s;
 			}
 
 			.widget:nth-child(even) {
@@ -82,12 +138,39 @@
 				color: #5a4a7d;
 				border-bottom: 3px solid #d8c8e8;
 				padding-bottom: 12px;
+				animation: slideInRight 0.8s ease-out 0.1s both;
 			}
 
 			.content h2 {
 				color: #6b5b7d;
 				border-left: 4px solid #d8c8e8;
 				padding-left: 12px;
+				animation: slideInRight 0.8s ease-out 0.2s both;
+			}
+
+			section {
+				animation: slideInRight 0.8s ease-out;
+				animation-fill-mode: both;
+			}
+
+			section:nth-of-type(1) {
+				animation-delay: 0.3s;
+			}
+
+			section:nth-of-type(2) {
+				animation-delay: 0.4s;
+			}
+
+			section:nth-of-type(3) {
+				animation-delay: 0.5s;
+			}
+
+			section:nth-of-type(4) {
+				animation-delay: 0.6s;
+			}
+
+			section:nth-of-type(5) {
+				animation-delay: 0.7s;
 			}
 
 			.quick-links a,

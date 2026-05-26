@@ -3,6 +3,26 @@
 		<meta charset="UTF-8" />
 		<title>Contract</title>
 		<style>
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+
+			@keyframes slideInUp {
+				from {
+					opacity: 0;
+					transform: translateY(20px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
 			body {
 				font-family: system-ui, sans-serif;
 				margin: 0;
@@ -13,6 +33,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				animation: fadeIn 0.6s ease-out;
 			}
 
 			.page {
@@ -22,6 +43,7 @@
 				border: 1px solid #d1f3d4;
 				border-radius: 24px;
 				box-shadow: 0 24px 50px rgba(15, 23, 42, 0.08);
+				animation: slideInUp 0.8s ease-out;
 			}
 
 			h1 {
@@ -29,21 +51,25 @@
 				color: #166534;
 				border-bottom: 3px solid #86efac;
 				padding-bottom: 12px;
+				animation: slideInUp 0.8s ease-out 0.1s both;
 			}
 
 			h2 {
 				color: #15803d;
 				border-left: 4px solid #86efac;
 				padding-left: 12px;
+				animation: slideInUp 0.8s ease-out 0.2s both;
 			}
 
 			p {
 				line-height: 1.75;
 				color: #334155;
+				animation: slideInUp 0.8s ease-out 0.3s both;
 			}
 
 			ul {
 				color: #475569;
+				animation: slideInUp 0.8s ease-out 0.4s both;
 			}
 
 			a {
